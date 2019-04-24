@@ -1,6 +1,6 @@
 //const filename = document.getElementById("filename").value;
 const fs = require('fs')
-console.log("inside js")
+//console.log("inside js")
 //function readFile(filename)
 document.getElementById('file').onchange = function() {
 
