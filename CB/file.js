@@ -4,7 +4,6 @@ $.ajax({
   }).done(successFunction);
 
   function successFunction(data) {
-    console.log("HER!");
     var allRows = data.split(/\r?\n|\r/);
     console.log(allRows);
     var table = '<table>';
@@ -40,3 +39,20 @@ $.ajax({
     table += '</table>';
     $('body').append(table);
 }
+
+$(function(){
+  $("tr").each(function(){
+    var col_val = $(this).find("td:eq(7)").text();
+    if (col_val == "valid"){
+      
+      $(this).addClass('selected');  //the selected class colors the row green//
+    } else if(col_val == "invalid"){
+      $(this).addClass('bad');
+    }
+    else{
+      $(this).addClass('header');
+    }
+  });
+});
+
+
