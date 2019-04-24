@@ -1,19 +1,12 @@
 Transaction Reference ID,Date,Payer Name,Payer Account Number,Payee Name,Payee Account Number,Amount,Validity
-123456789012,25042019,VickeyMickey                       ,200001020111,KamleshPatel                       ,200001020099,      9999.90,invalid
-
+123456789012,25042019,VickeyMickey                       ,200001020111,KamleshPatel                       ,200001020099,      9999.90,valid
 123452359012,02012018,Mehtanin                           ,200001020112,KanyaKaur                          ,200001020919,      9993.00,invalid
-
 123456689012,05032017,                                  C,2 , , , ,invalid
-123456789012,22042019,VickeyMickey                       ,200001020111,KamleshPatel                       ,200001020099,      9999.90,valid
+123456789012,22042019,VickeyMickey                       ,200001020111,KamleshPatel                       ,200001020099,      9999.90,invalid
 123452359012,02012018,Mehtanin                           ,200001020112,KanyaKaur                          ,200001020919,      9993.00,invalid
-
 36c4fd426901,25042019,JohnDey@123                        ,63cz0142fdzc,RukmaniSharma                      ,26m056df123z,      9777.88,invalid
-
 47056aboust6,28022017,MehtalalKhatri                     ,202341201012,KanyaSingh                         ,120000102091,      9993.00,invalid
-
 6475hhfyt651,25042019,AayushKamboj                       ,673ttegd1199,LokeshDubey@456                    ,87hiu0939576,      8874.10,invalid
-
-66473664hd33,22042019,SandeshRayal                       ,763476828989,MaitreyeeSharma                    ,7875544902hg,      9921.30,valid
-800971541112,25042019,ShyamIyyar                         ,200018753641,PragyaJha9                         ,987342210121,      8456.00,invalid
-
-344251752abc,22042019,AkshayPatil                        ,8332019923ca,SwatiMehra                         ,200364551278,      4536.00,valid
+66473664hd33,22042019,SandeshRayal                       ,763476828989,MaitreyeeSharma                    ,7875544902hg,      9921.30,invalid
+800971541112,25042019,ShyamIyyar                         ,200018753641,PragyaJha9                         ,987342210121,      8456.00,valid
+344251752abc,22042019,AkshayPatil                        ,8332019923ca,SwatiMehra                         ,200364551278,      4536.00,invalid
