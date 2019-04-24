@@ -11,23 +11,19 @@ public class Main
     static FileWriter allRecords;
     static HashSet<String> set=new HashSet<String>();  
     
-    public static void main(String []args){
-        readFile();
-    }
-    public static void readFile() {
-        
+   public Main(String filename){
         
         try {
 
             valid = new FileWriter("C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\webapps\\CB\\Valid.txt",true);
             allRecords = new FileWriter("C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\webapps\\CB\\AllRecords.txt",true); 
-            reader = new BufferedReader(new FileReader("C:\\Users\\csmal\\Desktop\\Desktop\\SampleFile_TTS.txt"));
-            String heading = "Transaction Reference ID" + "," + "Date" + "," + "Payer Name" + "," + "Payer Account Number" + "," + "Payee Name" + "," + "Payee Account Number" + "," + "Amount" + "," + "Validity";
+            reader = new BufferedReader(new FileReader(filename));
+            String heading = "Transaction Reference ID" + "," + "Date" + "," + "Payer Name" + "," + "Payer Account Number" + "," + "Payee Name" + "," + "Payee Account Number" + "," + "Amount" + "," + "Validity"+"\n";
             String line = reader.readLine();
             allRecords.write(heading);
-            allRecords.write(System.getProperty( "line.separator" ));
+            //allRecords.write(System.getProperty( "line.separator" ));
             valid.write(heading);
-            valid.write(System.getProperty( "line.separator" ));
+            //valid.write(System.getProperty( "line.separator" ));
             while (line != null) 
             {
                 if(line.length()<127)
@@ -68,10 +64,10 @@ public class Main
             temp = str.substring(0,12) + "," + str.substring(12,20)+ "," + str.substring(20,55)+ "," + str.substring(55,67)+ "," + str.substring(67,102)+ "," + str.substring(102,length)+ "," + " "+ ","+ "invalid";
 
         else if(length<127)
-            temp = str.substring(0,12) + "," + str.substring(12,20)+ "," + str.substring(20,55)+ "," + str.substring(55,67)+ "," + str.substring(67,102)+ "," + str.substring(102,114)+ "," + str.substring(114,length)+ ","+ "invalid";
+            temp = str.substring(0,12) + "," + str.substring(12,20)+ "," + str.substring(20,55)+ "," + str.substring(55,67)+ "," + str.substring(67,102)+ "," + str.substring(102,114)+ "," + str.substring(114,length)+ ","+ "invalid"+"\n";
     
-        allRecords.write(temp);
-        allRecords.write(System.getProperty( "line.separator" ));
+        allRecords.write("\n"+temp);
+        //allRecords.write(System.getProperty( "line.separator" ));
 
     }
     
@@ -103,22 +99,22 @@ public class Main
              {
                 set.add(substr);
                 //write into valid csv 
-                allRecords.write(elementsValid);
-                allRecords.write(System.getProperty( "line.separator" ));
-                valid.write(elementsValid);
-                valid.write(System.getProperty( "line.separator" ));
+                allRecords.write("\n"+elementsValid);
+                //allRecords.write(System.getProperty( "line.separator" ));
+                valid.write("\n"+elementsValid);
+                //valid.write(System.getProperty( "line.separator" ));
                 return ;
              }
 
              //write into invalid file
-             allRecords.write(elementsInvalid);
-             allRecords.write(System.getProperty( "line.separator" ));
+             allRecords.write("\n"+elementsInvalid);
+             //allRecords.write(System.getProperty( "line.separator" ));
             
             }
         else 
             //write into invalid file
-             allRecords.write(elementsInvalid);
-             allRecords.write(System.getProperty( "line.separator" ));          
+             allRecords.write("\n"+elementsInvalid);
+             //allRecords.write(System.getProperty( "line.separator" ));          
     }//end
     
     public static boolean Date(String str, int q)
